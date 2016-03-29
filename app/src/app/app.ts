@@ -1,6 +1,6 @@
 import {App, events, register, routing, web} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
-
+import SingleViewControl from '../viewcontrols/singleview/singleview.vc';
 export default class MyApp extends App {
     constructor(router: routing.Router, config: web.IBrowserConfig) {
         super();
@@ -8,7 +8,8 @@ export default class MyApp extends App {
 		config.routingType = config.STATE;
 
         router.configure([
-            { pattern: '', view: HomeViewControl }
+            { pattern: '', view: HomeViewControl },
+            { pattern: 'single/:id', view: SingleViewControl }
         ]);
     }
 

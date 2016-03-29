@@ -1,6 +1,6 @@
 <h1>Reddit Viewer</h1>
 <div class="mainview">
-    <ul plat-foreach="item" plat-context="articles">
-        <li><plat-button plat-tap="singleItem()"></plat-button>{{title}} {{thumbnail}}</li>
+    <ul plat-control="plat-foreach" plat-context="articles">
+        <li><plat-button plat-tap="singleItem(id)">READ</plat-button><plat-image plat-src="{{thumbnail}}"></plat-image> {{title}}, Author: {{author}}</li>
     </ul>
 </div>
